@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch('https://timschilling.net/strapi/api/posts', {
+        headers: {
+          Method: 'GET',
+          ContentType: 'application/json',
+          Authorization:
+            'bearer 3ce9d4e2d84bed78f1b54ca14677583608d4c209848a0c24d2eaf7fc642b50be115c5915ae2d70581fecee9412b4aa29ffadbead3c6589b71042c4031b9fe2673c005afb5b140cf83a03a3dca197c0430ff26fc9fb355085619089e847263151e2341014e752c735245d7141fac6419a68febf88f356b55ef3b65f116f4666be',
+        },
+      })
+        .then(response => response.json())
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    </script>
+  </body>
+</html>
